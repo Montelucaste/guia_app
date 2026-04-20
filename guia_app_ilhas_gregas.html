@@ -194,6 +194,62 @@
             text-align: center;
         }
 
+        /* Grid para 3 imagens lado a lado */
+        .grid-3-imagens {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .grid-3-imagens .imagem-item {
+            flex: 1;
+            min-width: 180px;
+            text-align: center;
+        }
+
+        .grid-3-imagens img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+        }
+
+        .grid-3-imagens .legenda-imagem {
+            font-size: 11px;
+            color: #6b7280;
+            margin-top: 6px;
+        }
+
+        /* Grid para 2 imagens lado a lado */
+        .grid-2-imagens {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .grid-2-imagens .imagem-item {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+
+        .grid-2-imagens img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+        }
+
+        .grid-2-imagens .legenda-imagem {
+            font-size: 11px;
+            color: #6b7280;
+            margin-top: 6px;
+        }
+
         .dica {
             background: #fef3c7;
             border-left: 4px solid #f59e0b;
@@ -226,303 +282,367 @@
             .tabela-campos { font-size: 13px; }
             .tabela-campos th, .tabela-campos td { padding: 8px; }
             .btn-voltar { padding: 8px 18px; font-size: 13px; }
+            .grid-3-imagens { flex-direction: column; gap: 10px; }
+            .grid-2-imagens { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
 <body>
-
+<div class="container">
+    <!-- Botão Voltar -->
         <!-- Cabeçalho -->
-        <div class="header">
-            <h1>📱 Guia Ilustrado do Aplicativo Ilhas Gregas</h1>
-            <p>Condomínio Ilhas Gregas – Aplicativo de Gestão<br>
-            Paulo Silva - (41) 9 9979-8866 - pauloutfpr@gmail.com</p>
-        </div>
+    <div class="header">
+        <h1>📱 Guia Ilustrado do Aplicativo Ilhas Gregas</h1>
+        <p>Condomínio Ilhas Gregas – Aplicativo de Gestão<br>
+        Paulo Silva - (41) 9 9979-8866 - pauloutfpr@gmail.com</p>
+    </div>
 
-        <!-- ==================== ACESSO E INSTALAÇÃO ==================== -->
-        <div class="card">
-            <h2>📲 Acesso e Instalação</h2>
-            
-            <div class="passo">
-                <span class="passo-numero">1</span> Acesse o aplicativo pelo link: <strong>ilhas_gregas_app</strong>
-            </div>
-            
-            <div class="imagem-container">
-                <img src="http://nuclearsites.com.br/condominio/Imagens_html/1.png" alt="Tela Inicial">
-                <div class="legenda-imagem">📸 Imagem 1 - Tela Inicial (Faixa de instalação e botão "Criar Conta")</div>
-            </div>
-            
-            <div class="passo">
-                <span class="passo-numero">2</span> Na tela inicial, você verá uma faixa com a mensagem:<br>
-                <em>"Ilhas Gregas - Instale nosso aplicativo e obtenha uma experiência incrível"</em>
-            </div>
-            
-            <div class="passo">
-                <span class="passo-numero">3</span> Clique no botão <strong>"INSTALAR"</strong> e aguarde a instalação.
-            </div>
-            
-            <div class="passo">
-                <span class="passo-numero">4</span> Após instalar, <strong>permita o envio de notificações</strong> quando solicitado.
-            </div>
+    <!-- ==================== ACESSO E INSTALAÇÃO ==================== -->
+    <div class="card">
+        <h2>📲 Acesso e Instalação</h2>
+        
+        <div class="passo">
+            <span class="passo-numero">1</span> Acesse o aplicativo pelo link: <strong>ilhas_gregas_app</strong>
         </div>
-
-        <!-- ==================== CRIAÇÃO DE CONTA ==================== -->
-        <div class="card">
-            <h2>🔐 Criação de Conta</h2>
-            
-            <div class="passo">
-                <span class="passo-numero">5</span> Na tela inicial, clique no botão <strong>"CRIAR CONTA"</strong>
-            </div>
-            
-            <div class="passo">
-                <span class="passo-numero">6</span> Preencha todos os campos do formulário:
-            </div>
-            
-            <table class="tabela-campos">
-                <thead>
-                    <tr><th>Campo</th><th>Descrição</th><th>Exemplo</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>📧 E-mail</td><td>Seu endereço de e-mail válido</td><td>morador@exemplo.com</td></tr>
-                    <tr><td>🔒 Senha</td><td>Mínimo 6 caracteres</td><td>••••••</td></tr>
-                    <tr><td>👤 Nome completo</td><td>Seu nome completo</td><td>João Silva Santos</td></tr>
-                    <tr><td>📱 Telefone</td><td>Com DDD</td><td>(41) 99999-9999</td></tr>
-                    <tr><td>🏢 Apartamento</td><td>Número do seu apto</td><td>101</td></tr>
-                    <tr><td>🏗️ Torre</td><td>Nome ou número da torre</td><td>Torre 1</td></tr>
-                </tbody>
-            </table>
-            
-            <div class="imagem-container">
-                <img src="http://nuclearsites.com.br/condominio/Imagens_html/2.png" alt="Tela de Cadastro">
-                <div class="legenda-imagem">📸 Imagem 2 - Tela de Cadastro (Formulário completo preenchido)</div>
-            </div>
-            
-            <div class="passo">
-                <span class="passo-numero">7</span> Leia os termos e a Política de Privacidade (LGPD) e marque a caixa de confirmação:<br>
-                ☑️ <strong>"Li e aceito os Termos de Uso e a Política de Privacidade"</strong>
-            </div>
-            
-            <div class="imagem-container">
-                <img src="http://nuclearsites.com.br/condominio/Imagens_html/33.png" alt="Termos LGPD">
-                <div class="legenda-imagem">📸 Imagem 3 - Termos LGPD (Caixa de aceite dos termos)</div>
-            </div>
-            
-            <div class="passo">
-                <span class="passo-numero">8</span> Clique no botão <strong>"CRIAR CONTA"</strong>
-            </div>
+        
+        <div class="imagem-container">
+            <img src="http://nuclearsites.com.br/condominio/Imagens_html/1.png" alt="Tela Inicial">
+            <div class="legenda-imagem">📸 Imagem 1 - Tela Inicial (Faixa de instalação e botão "Criar Conta")</div>
         </div>
-
-        <!-- ==================== REGISTRAR ATIVIDADE ==================== -->
-        <div class="card">
-            <h2>📝 Registrar uma Atividade</h2>
-            
-            <div class="passo">
-                <span class="passo-numero">9</span> Na tela principal, localize o botão <strong>"VER TODAS AS ATIVIDADES"</strong> (botão amarelo) ou o botão <strong>"+ NOVA ATIVIDADE"</strong> (botão roxo)
-            </div>
-            
-            <div class="imagem-container">
-                <img src="http://nuclearsites.com.br/condominio/Imagens_html/4.png" alt="Tela Principal">
-                <div class="legenda-imagem">📸 Imagem 4 - Tela Principal (Botões "Nova Atividade" e "Ver todas as atividades")</div>
-            </div>
-            
-            <div class="passo">
-                <span class="passo-numero">10</span> Preencha o formulário de registro:
-            </div>
-            
-            <table class="tabela-campos">
-                <thead>
-                    <tr><th>Campo</th><th>Obrigatório</th><th>Descrição</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td><strong>Título</strong></td><td>✅ Sim</td><td>Resumo claro do problema (ex: "Vazamento no corredor")</td></tr>
-                    <tr><td><strong>Descrição</strong></td><td>✅ Sim</td><td>Descreva detalhadamente o problema ou sugestão</td></tr>
-                    <tr><td><strong>Prioridade</strong></td><td>✅ Sim</td><td>Selecione: 🟡 Baixa / 🟠 Média / 🔴 Urgente</td></tr>
-                    <tr><td><strong>Imagem</strong></td><td>❌ Opcional</td><td>Anexe uma foto (muito importante para explicar melhor o problema)</td></tr>
-                </tbody>
-            </table>
-            
-            <div class="aviso">
-                ⚠️ <strong>ATENÇÃO:</strong> Não inclua informações pessoais, confidenciais ou sensíveis (conforme LGPD). Registros com informações pessoais serão excluídos.
-            </div>
-            
-            <div class="imagem-container">
-                <img src="http://nuclearsites.com.br/condominio/Imagens_html/5.png" alt="Formulário de Registro">
-                <div class="legenda-imagem">📸 Imagem 5 - Formulário de Registro (Registro de atividade com exemplo preenchido)</div>
-            </div>
-            
-            <div class="passo">
-                <span class="passo-numero">11</span> Clique no botão <strong>"📤 ENVIAR ATIVIDADE"</strong>
-            </div>
-            
-            <div class="passo">
-                <span class="passo-numero">12</span> Você será redirecionado automaticamente para a página de atividades e receberá a mensagem:<br>
-                ✅ <strong>"Atividade registrada com sucesso!"</strong>
-            </div>
-            
-            <div class="imagem-container">
-                <img src="http://nuclearsites.com.br/condominio/Imagens_html/6.png" alt="Mensagem de Confirmação">
-                <div class="legenda-imagem">📸 Imagem 6 - Mensagem de Confirmação (Mensagem de sucesso)</div>
-            </div>
+        
+        <div class="passo">
+            <span class="passo-numero">2</span> Na tela inicial, você verá uma faixa com a mensagem:<br>
+            <em>"Ilhas Gregas - Instale nosso aplicativo e obtenha uma experiência incrível"</em>
         </div>
-
-        <!-- ==================== VISUALIZAR E INTERAGIR ==================== -->
-        <div class="card">
-            <h2>📋 Visualizar e Interagir com Atividades</h2>
-            
-            <div class="passo">
-                <span class="passo-numero">13</span> Na página de atividades, você verá todos os posts registrados.
-            </div>
-            
-            <div class="imagem-container">
-                <img src="http://nuclearsites.com.br/condominio/Imagens_html/7.png" alt="Lista de Atividades">
-                <div class="legenda-imagem">📸 Imagem 7 - Lista de Atividades (Posts com diferentes prioridades)</div>
-            </div>
-            
-            <h3>🎨 Identificação Visual por Prioridade:</h3>
-            
-            <table class="tabela-campos">
-                <thead><tr><th>Prioridade</th><th>Cor da Borda</th><th>Significado</th></tr></thead>
-                <tbody>
-                    <tr><td>🟡 Baixa</td><td><span class="cor-borda cor-amarela"></span> Amarela</td><td>Pode ser resolvido com calma</td></tr>
-                    <tr><td>🟠 Média</td><td><span class="cor-borda cor-laranja"></span> Laranja</td><td>Atenção moderada</td></tr>
-                    <tr><td>🔴 Urgente</td><td><span class="cor-borda cor-vermelha"></span> Vermelha</td><td>Precisa de ação imediata</td></tr>
-                    <tr><td>✅ Concluída</td><td><span class="cor-borda cor-verde"></span> Verde com fundo claro</td><td>Atividade finalizada</td></tr>
-                </tbody>
-            </table>
-            
-            <h3>🔍 Filtrar Atividades:</h3>
-            <div class="passo">
-                <span class="passo-numero">14</span> Utilize os filtros no topo da página:
-            </div>
-            
-            <table class="tabela-campos">
-                <thead><tr><th>Filtro</th><th>Opções</th></tr></thead>
-                <tbody>
-                    <tr><td><strong>Status</strong></td><td>Todos / Parada / Em Andamento / Concluída</td></tr>
-                    <tr><td><strong>Prioridade</strong></td><td>Todas / Baixa / Média / Urgente</td></tr>
-                </tbody>
-            </table>
-            
-            <div class="imagem-container">
-                <img src="http://nuclearsites.com.br/condominio/Imagens_html/8.png" alt="Filtros">
-                <div class="legenda-imagem">📸 Imagem 8 - Filtros (Seletores de status e prioridade)</div>
-            </div>
-            
-            <h3>👍 Interagir com os Posts:</h3>
-            <div class="passo">
-                <span class="passo-numero">15</span> Em cada post, você pode interagir através da votação:
-            </div>
-            
-            <table class="tabela-campos">
-                <thead><tr><th>Ação</th><th>Ícone</th><th>Efeito</th></tr></thead>
-                <tbody>
-                    <tr><td>Aprovar</td><td>👍</td><td>Adiciona 1 ponto positivo</td></tr>
-                    <tr><td>Reprovar</td><td>👎</td><td>Adiciona 1 ponto negativo</td></tr>
-                </tbody>
-            </table>
-            
-            <div class="dica">
-                💡 <strong>Dica:</strong> A votação ajuda a identificar e reavaliar demandas em caso de muitas reprovações.
-            </div>
-            
-            <div class="imagem-container">
-                <img src="http://nuclearsites.com.br/condominio/Imagens_html/9.png" alt="Votação">
-                <div class="legenda-imagem">📸 Imagem 9 - Votação (Botões 👍 e 👎 em um post)</div>
-            </div>
-            
-            <h3>📊 Informações do Post:</h3>
-            <div class="passo">
-                Cada post exibe:
-                <ul style="margin-top: 10px; margin-left: 20px;">
-                    <li>✅ Título da demanda</li>
-                    <li>✅ Prioridade (com ícone e cor)</li>
-                    <li>✅ Status atual (Parada / Em Andamento / Concluída)</li>
-                    <li>✅ Descrição do problema</li>
-                    <li>✅ Data e horário do registro</li>
-                    <li>✅ Data e horário da conclusão (se concluída)</li>
-                    <li>✅ Votos (👍 / 👎)</li>
-                    <li>✅ Imagem anexada (se houver)</li>
-                    <li>✅ Resultado final com imagem "antes e depois" (se concluída)</li>
-                </ul>
-            </div>
-            
-            <div class="imagem-container">
-                <img src="http://nuclearsites.com.br/condominio/Imagens_html/10.png" alt="Post Concluído">
-                <div class="legenda-imagem">📸 Imagem 10 - Post Concluído (Fundo verde e resultado final)</div>
-            </div>
+        
+        <div class="passo">
+            <span class="passo-numero">3</span> Clique no botão <strong>"INSTALAR"</strong> e aguarde a instalação.
         </div>
-
-        <!-- ==================== NAVEGAÇÃO ==================== -->
-        <div class="card">
-            <h2>🔄 Navegação</h2>
-            
-            <div class="passo">
-                <span class="passo-numero">16</span> Para voltar à tela de registro, clique no botão <strong>"+ NOVA ATIVIDADE"</strong> no topo da página.
-            </div>
-            
-            <div class="imagem-container">
-                <img src="http://nuclearsites.com.br/condominio/Imagens_html/12.png" alt="Botão Nova Atividade">
-                <div class="legenda-imagem">📸 Imagem 12 - Botão Nova Atividade (Botão para voltar ao registro)</div>
-            </div>
-        </div>
-
-        <!-- ==================== INFORMAÇÕES PARA SÍNDICO ==================== -->
-        <div class="card">
-            <h2>👨‍💼 Informações para Síndico e Conselheiros</h2>
-            
-            <table class="tabela-campos">
-                <thead><tr><th>Ação</th><th>Responsável</th><th>Como fazer</th></tr></thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Alterar Prioridade</strong></td>
-                        <td>Síndico / Conselheiros</td>
-                        <td>Clique no badge de prioridade (ex: "🟡 Baixa ✏️"), digite a senha e selecione a nova prioridade</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Alterar Status</strong></td>
-                        <td>Síndico / Conselheiros</td>
-                        <td>Clique no badge de status (ex: "⏸️ Parada ✏️"), digite a senha e selecione o novo status</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Excluir Post</strong></td>
-                        <td>Síndico / Conselheiros</td>
-                        <td>Clique no botão "🗑️ Excluir", digite a senha e confirme</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Registrar Conclusão</strong></td>
-                        <td>Síndico / Conselheiros</td>
-                        <td>Ao alterar status para "Concluída", será solicitada uma descrição e foto do resultado final</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <div class="aviso">
-                🔐 <strong>Senhas:</strong> Cada ação requer uma senha específica para garantir segurança.
-            </div>
-            
-            <div class="imagem-container">
-                <img src="http://nuclearsites.com.br/condominio/Imagens_html/11.png" alt="Modal de Senha">
-                <div class="legenda-imagem">📸 Imagem 11 - Modal de Senha (Popup para alterar status/prioridade)</div>
-            </div>
-        </div>
-
-        <!-- ==================== DICAS IMPORTANTES ==================== -->
-        <div class="card">
-            <h2>💡 Dicas Importantes</h2>
-            
-            <ol style="margin-left: 20px; line-height: 1.8;">
-                <li><strong>Sempre anexe uma foto quando possível</strong> - isso ajuda muito na compreensão do problema</li>
-                <li><strong>Não inclua dados pessoais</strong> (telefone, e-mail, documentos) nas descrições</li>
-                <li><strong>Acompanhe a votação</strong> - ela reflete a opinião da comunidade</li>
-                <li><strong>Use os filtros</strong> para encontrar rapidamente atividades específicas</li>
-                <li><strong>Atividades concluídas</strong> mostram o "antes e depois" da solução</li>
-            </ol>
-        </div>
-
-        <!-- Rodapé -->
-        <div class="footer">
-            <p>Condomínio Ilhas Gregas – Guia Ilustrado do Aplicativo</p>
-            <p>Em caso de dúvidas, entre em contato com o síndico ou a administração do aplicativo.</p>
+        
+        <div class="passo">
+            <span class="passo-numero">4</span> Após instalar, <strong>permita o envio de notificações</strong> quando solicitado.
         </div>
     </div>
+
+    <!-- ==================== CRIAÇÃO DE CONTA ==================== -->
+    <div class="card">
+        <h2>🔐 Criação de Conta</h2>
+        
+        <div class="passo">
+            <span class="passo-numero">5</span> Na tela inicial, clique no botão <strong>"CRIAR CONTA"</strong>
+        </div>
+        
+        <div class="passo">
+            <span class="passo-numero">6</span> Preencha todos os campos do formulário:
+        </div>
+        
+        <table class="tabela-campos">
+            <thead>
+                <tr><th>Campo</th><th>Descrição</th><th>Exemplo</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>📧 E-mail</td><td>Seu endereço de e-mail válido</td><td>morador@exemplo.com</td></tr>
+                <tr><td>🔒 Senha</td><td>Mínimo 6 caracteres</td><td>••••••</td></tr>
+                <tr><td>👤 Nome completo</td><td>Seu nome completo</td><td>João Silva Santos</td></tr>
+                <tr><td>📱 Telefone</td><td>Com DDD</td><td>(41) 99999-9999</td></tr>
+                <tr><td>🏢 Apartamento</td><td>Número do seu apto</td><td>101</td></tr>
+                <tr><td>🏗️ Torre</td><td>Nome ou número da torre</td><td>Torre 1</td></tr>
+            </tbody>
+        </table>
+        
+        <div class="imagem-container">
+            <img src="http://nuclearsites.com.br/condominio/Imagens_html/2.png" alt="Tela de Cadastro">
+            <div class="legenda-imagem">📸 Imagem 2 - Tela de Cadastro (Formulário completo preenchido)</div>
+        </div>
+        
+        <div class="passo">
+            <span class="passo-numero">7</span> Leia os termos e a Política de Privacidade (LGPD) e marque a caixa de confirmação:<br>
+            ☑️ <strong>"Li e aceito os Termos de Uso e a Política de Privacidade"</strong>
+        </div>
+        
+        <div class="imagem-container">
+            <img src="http://nuclearsites.com.br/condominio/Imagens_html/33.png" alt="Termos LGPD">
+            <div class="legenda-imagem">📸 Imagem 3 - Termos LGPD (Caixa de aceite dos termos)</div>
+        </div>
+        
+        <div class="passo">
+            <span class="passo-numero">8</span> Clique no botão <strong>"CRIAR CONTA"</strong>
+        </div>
+    </div>
+
+    <!-- ==================== REGISTRAR ATIVIDADE ==================== -->
+    <div class="card">
+        <h2>📝 Registrar uma Atividade</h2>
+        
+        <div class="passo">
+            <span class="passo-numero">9</span> Na tela principal, localize o botão <strong>"VER TODAS AS ATIVIDADES"</strong> (botão amarelo) ou o botão <strong>"+ NOVA ATIVIDADE"</strong> (botão roxo)
+        </div>
+        
+        <div class="imagem-container">
+            <img src="http://nuclearsites.com.br/condominio/Imagens_html/4.png" alt="Tela Principal">
+            <div class="legenda-imagem">📸 Imagem 4 - Tela Principal (Botões "Nova Atividade" e "Ver todas as atividades")</div>
+        </div>
+        
+        <div class="passo">
+            <span class="passo-numero">10</span> Preencha o formulário de registro:
+        </div>
+        
+        <table class="tabela-campos">
+            <thead>
+                <tr><th>Campo</th><th>Obrigatório</th><th>Descrição</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Título</strong></td><td>✅ Sim</td><td>Resumo claro do problema (ex: "Vazamento no corredor")</td></tr>
+                <tr><td><strong>Descrição</strong></td><td>✅ Sim</td><td>Descreva detalhadamente o problema ou sugestão</td></tr>
+                <tr><td><strong>Prioridade</strong></td><td>✅ Sim</td><td>Selecione: 🟡 Baixa / 🟠 Média / 🔴 Urgente</td></tr>
+                <tr><td><strong>Imagem</strong></td><td>❌ Opcional</td><td>Anexe uma foto (muito importante para explicar melhor o problema)</td></tr>
+            </tbody>
+        </table>
+        
+        <div class="aviso">
+            ⚠️ <strong>ATENÇÃO:</strong> Não inclua informações pessoais, confidenciais ou sensíveis (conforme LGPD). Registros com informações pessoais serão excluídos.
+        </div>
+        
+        <div class="imagem-container">
+            <img src="http://nuclearsites.com.br/condominio/Imagens_html/5.png" alt="Formulário de Registro">
+            <div class="legenda-imagem">📸 Imagem 5 - Formulário de Registro (Registro de atividade com exemplo preenchido)</div>
+        </div>
+        
+        <div class="passo">
+            <span class="passo-numero">11</span> Clique no botão <strong>"📤 ENVIAR ATIVIDADE"</strong>
+        </div>
+        
+        <div class="passo">
+            <span class="passo-numero">12</span> Você será redirecionado automaticamente para a página de atividades e receberá a mensagem:<br>
+            ✅ <strong>"Atividade registrada com sucesso!"</strong>
+        </div>
+        
+        <div class="imagem-container">
+            <img src="http://nuclearsites.com.br/condominio/Imagens_html/6.png" alt="Mensagem de Confirmação">
+            <div class="legenda-imagem">📸 Imagem 6 - Mensagem de Confirmação (Mensagem de sucesso)</div>
+        </div>
+    </div>
+
+    <!-- ==================== VISUALIZAR E INTERAGIR ==================== -->
+    <div class="card">
+        <h2>📋 Visualizar e Interagir com Atividades</h2>
+        
+        <div class="passo">
+            <span class="passo-numero">13</span> Na página de atividades, você verá todos os posts registrados.
+        </div>
+        
+        <div class="imagem-container">
+            <img src="http://nuclearsites.com.br/condominio/Imagens_html/7.png" alt="Lista de Atividades">
+            <div class="legenda-imagem">📸 Imagem 7 - Lista de Atividades (Posts com diferentes prioridades)</div>
+        </div>
+        
+        <h3>🎨 Identificação Visual por Prioridade:</h3>
+        
+        <table class="tabela-campos">
+            <thead><tr><th>Prioridade</th><th>Cor da Borda</th><th>Significado</th></tr></thead>
+            <tbody>
+                <tr><td>🟡 Baixa</td><td><span class="cor-borda cor-amarela"></span> Amarela</td><td>Pode ser resolvido com calma</td></tr>
+                <tr><td>🟠 Média</td><td><span class="cor-borda cor-laranja"></span> Laranja</td><td>Atenção moderada</td></tr>
+                <tr><td>🔴 Urgente</td><td><span class="cor-borda cor-vermelha"></span> Vermelha</td><td>Precisa de ação imediata</td></tr>
+                <tr><td>✅ Concluída</td><td><span class="cor-borda cor-verde"></span> Verde com fundo claro</td><td>Atividade finalizada</td></tr>
+            </tbody>
+        </table>
+        
+        <h3>🔍 Filtrar Atividades:</h3>
+        <div class="passo">
+            <span class="passo-numero">14</span> Utilize os filtros no topo da página:
+        </div>
+        
+        <table class="tabela-campos">
+            <thead><tr><th>Filtro</th><th>Opções</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Status</strong></td><td>Todos / Parada / Em Andamento / Concluída</td></tr>
+                <tr><td><strong>Prioridade</strong></td><td>Todas / Baixa / Média / Urgente</td></tr>
+            </tbody>
+        </table>
+        
+        <div class="imagem-container">
+            <img src="http://nuclearsites.com.br/condominio/Imagens_html/8.png" alt="Filtros">
+            <div class="legenda-imagem">📸 Imagem 8 - Filtros (Seletores de status e prioridade)</div>
+        </div>
+        
+        <h3>👍 Interagir com os Posts:</h3>
+        <div class="passo">
+            <span class="passo-numero">15</span> Em cada post, você pode interagir através da votação:
+        </div>
+        
+        <table class="tabela-campos">
+            <thead><tr><th>Ação</th><th>Ícone</th><th>Efeito</th></tr></thead>
+            <tbody>
+                <tr><td>Aprovar</td><td>👍</td><td>Adiciona 1 ponto positivo</td></tr>
+                <tr><td>Reprovar</td><td>👎</td><td>Adiciona 1 ponto negativo</td></tr>
+            </tbody>
+        </table>
+        
+        <div class="dica">
+            💡 <strong>Dica:</strong> A votação ajuda a identificar e reavaliar demandas em caso de muitas reprovações.
+        </div>
+        
+        <div class="imagem-container">
+            <img src="http://nuclearsites.com.br/condominio/Imagens_html/9.png" alt="Votação">
+            <div class="legenda-imagem">📸 Imagem 9 - Votação (Botões 👍 e 👎 em um post)</div>
+        </div>
+        
+        <h3>📊 Informações do Post:</h3>
+        <div class="passo">
+            Cada post exibe:
+            <ul style="margin-top: 10px; margin-left: 20px;">
+                <li>✅ Título da demanda</li>
+                <li>✅ Prioridade (com ícone e cor)</li>
+                <li>✅ Status atual (Parada / Em Andamento / Concluída)</li>
+                <li>✅ Descrição do problema</li>
+                <li>✅ Data e horário do registro</li>
+                <li>✅ Data e horário da conclusão (se concluída)</li>
+                <li>✅ Votos (👍 / 👎)</li>
+                <li>✅ Imagem anexada (se houver)</li>
+                <li>✅ Resultado final com imagem "antes e depois" (se concluída)</li>
+            </ul>
+        </div>
+        
+        <div class="imagem-container">
+            <img src="http://nuclearsites.com.br/condominio/Imagens_html/10.png" alt="Post Concluído">
+            <div class="legenda-imagem">📸 Imagem 10 - Post Concluído (Fundo verde e resultado final)</div>
+        </div>
+    </div>
+
+    <!-- ==================== DASHBOARD DE MÉTRICAS ==================== -->
+    <div class="card">
+        <h2>📊 Dashboard de Métricas</h2>
+        
+        <div class="passo">
+            <span class="passo-numero">17</span> Na página de atividades, clique no botão <strong>"📊 Gráficos"</strong> (botão verde) para acessar o Dashboard.
+        </div>
+        
+        <div class="imagem-container">
+            <img src="http://nuclearsites.com.br/condominio/Imagens_html/12.png" alt="Botão Gráficos">
+            <div class="legenda-imagem">📸 Imagem 12 - Botão "📊 Gráficos" na página de atividades</div>
+        </div>
+        
+        <div class="passo">
+            <span class="passo-numero">18</span> O Dashboard exibe métricas e gráficos para acompanhamento da gestão:
+        </div>
+        
+        <h3>📈 Índice de Eficiência</h3>
+        <div class="imagem-container">
+            <img src="http://nuclearsites.com.br/condominio/Imagens_html/13.png" alt="Dashboard - Índice de Eficiência">
+            <div class="legenda-imagem">📸 Imagem 13 - Dashboard (Índice de Eficiência em destaque)</div>
+        </div>
+        
+        <h3>📊 Indicadores e Gráficos</h3>
+        <div class="grid-2-imagens">
+            <div class="imagem-item">
+                <img src="http://nuclearsites.com.br/condominio/Imagens_html/14.png" alt="6 Blocos e Status">
+                <div class="legenda-imagem">📸 Imagem 14 - 6 blocos de indicadores e gráfico de status</div>
+            </div>
+            <div class="imagem-item">
+                <img src="http://nuclearsites.com.br/condominio/Imagens_html/15.png" alt="Prioridade e Evolução">
+                <div class="legenda-imagem">📸 Imagem 15 - Gráficos de prioridade e evolução mensal</div>
+            </div>
+        </div>
+        
+        <div class="imagem-container">
+            <img src="http://nuclearsites.com.br/condominio/Imagens_html/16.png" alt="Principais Assuntos">
+            <div class="legenda-imagem">📸 Imagem 16 - Gráfico de Principais Assuntos (categorias)</div>
+        </div>
+        
+        <h3>📊 O que cada indicador significa:</h3>
+        
+        <table class="tabela-campos">
+            <thead><tr><th>Indicador</th><th>Descrição</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Total de Atividades</strong></td><td>Número total de registros no sistema</td></tr>
+                <tr><td><strong>Concluídas</strong></td><td>Atividades finalizadas com sucesso</td></tr>
+                <tr><td><strong>Em Andamento</strong></td><td>Atividades em processo de solução</td></tr>
+                <tr><td><strong>Paradas</strong></td><td>Atividades aguardando análise ou ação</td></tr>
+                <tr><td><strong>Taxa de Resolução</strong></td><td>Percentual de atividades concluídas</td></tr>
+                <tr><td><strong>Tempo Médio</strong></td><td>Média de dias para solução das atividades</td></tr>
+                <tr><td><strong>Índice de Eficiência</strong></td><td>Termômetro com a performance geral da gestão</td></tr>
+            </tbody>
+        </table>
+        
+        <div class="dica">
+            💡 <strong>Dica:</strong> Os dados são atualizados automaticamente conforme novas atividades são registradas ou status são alterados.
+        </div>
+    </div>
+
+    <!-- ==================== NAVEGAÇÃO ==================== -->
+    <div class="card">
+        <h2>🔄 Navegação</h2>
+        
+        <div class="passo">
+            <span class="passo-numero">19</span> Para voltar à tela de registro, clique no botão <strong>"+ NOVA ATIVIDADE"</strong> no topo da página.
+        </div>
+        
+        <div class="imagem-container">
+            <img src="http://nuclearsites.com.br/condominio/Imagens_html/12.png" alt="Botão Nova Atividade">
+            <div class="legenda-imagem">📸 Imagem 12 - Botão Nova Atividade (Botão para voltar ao registro)</div>
+        </div>
+    </div>
+
+    <!-- ==================== INFORMAÇÕES PARA SÍNDICO ==================== -->
+    <div class="card">
+        <h2>👨‍💼 Informações para Síndico e Conselheiros</h2>
+        
+        <table class="tabela-campos">
+            <thead><tr><th>Ação</th><th>Responsável</th><th>Como fazer</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><strong>Alterar Prioridade</strong></td>
+                    <td>Síndico / Conselheiros</td>
+                    <td>Clique no badge de prioridade (ex: "🟡 Baixa ✏️"), digite a senha e selecione a nova prioridade</td>
+                </tr>
+                <tr>
+                    <td><strong>Alterar Status</strong></td>
+                    <td>Síndico / Conselheiros</td>
+                    <td>Clique no badge de status (ex: "⏸️ Parada ✏️"), digite a senha e selecione o novo status</td>
+                </tr>
+                <tr>
+                    <td><strong>Excluir Post</strong></td>
+                    <td>Síndico / Conselheiros</td>
+                    <td>Clique no botão "🗑️ Excluir", digite a senha e confirme</td>
+                </tr>
+                <tr>
+                    <td><strong>Registrar Conclusão</strong></td>
+                    <td>Síndico / Conselheiros</td>
+                    <td>Ao alterar status para "Concluída", será solicitada uma descrição e foto do resultado final</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="aviso">
+            🔐 <strong>Senhas:</strong> Cada ação requer uma senha específica para garantir segurança.
+        </div>
+        
+        <div class="imagem-container">
+            <img src="http://nuclearsites.com.br/condominio/Imagens_html/11.png" alt="Modal de Senha">
+            <div class="legenda-imagem">📸 Imagem 11 - Modal de Senha (Popup para alterar status/prioridade)</div>
+        </div>
+    </div>
+
+    <!-- ==================== DICAS IMPORTANTES ==================== -->
+    <div class="card">
+        <h2>💡 Dicas Importantes</h2>
+        
+        <ol style="margin-left: 20px; line-height: 1.8;">
+            <li><strong>Sempre anexe uma foto quando possível</strong> - isso ajuda muito na compreensão do problema</li>
+            <li><strong>Não inclua dados pessoais</strong> (telefone, e-mail, documentos) nas descrições</li>
+            <li><strong>Acompanhe a votação</strong> - ela reflete a opinião da comunidade</li>
+            <li><strong>Use os filtros</strong> para encontrar rapidamente atividades específicas</li>
+            <li><strong>Atividades concluídas</strong> mostram o "antes e depois" da solução</li>
+            <li><strong>Acompanhe o Dashboard</strong> - os gráficos ajudam a visualizar a eficiência da gestão</li>
+        </ol>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="footer">
+        <p>Condomínio Ilhas Gregas – Guia Ilustrado do Aplicativo</p>
+        <p>Em caso de dúvidas, entre em contato com o síndico ou a administração do aplicativo.</p>
+    </div>
+</div>
 </body>
 </html>
